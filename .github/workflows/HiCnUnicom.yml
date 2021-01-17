@@ -3,7 +3,7 @@ name: 联通掌厅签到
 on:
   workflow_dispatch:
   schedule:
-    - cron: 30 04,23 * * ?
+    - cron: 30 02 * * *
     
 jobs:
   run-it:
@@ -25,7 +25,7 @@ jobs:
             appid: ${{ secrets.APPID }}
           run: |
             # 判断是否有设置appid，没有则使用默认配置
-            if test -z "$appid"; then   appid="247b001385de5cc6ce11731ba1b15835313d489d604e58280e455a6c91e5058651acfb0f0b77029c2372659c319e02645b54c0acc367e692ab24a546b83c302d"; fi
+            if test -z "$appid"; then   appid="1f7af72ad6912d306b5053abf90c7ebb826a365d10d5321e89024019bdbfc7f3619f6cca46e44d842694dbbb43155efc2d0162c5a331f1a0df69d4335fd8f8b4"; fi
             
             for u in $user
             do
